@@ -148,6 +148,27 @@ The method: Called Eulerian Video Magnification.
 - The resulting signal is then amplified to reveal hidden information.
 
 
+## Object Recognition
+
+YOLO utilizes entire images during training and testing utilizes a single convolutional neural network to simultaneously predict multiple bounding boxes and probabilities associated probabilities.
+Limitations: YOLO imposes a constraint on the number of boxes that can predicted per cell, 2, and only one class prediction per cell, so it struggles to detect small and nearby objects
+
+
+## A Primer on Deep Learning
+
+DL is an algorithm that is able to learn from data. DL deals with Machine Learning models that have multiple hidden layers organized in a hierarchical fashion. Eg. CNN
+
+
+## Semantic Segmentation
+
+It is about to understanding an image at pixel level, i.e. we want to assign each pixel in the image an object class.
+Application: Autodrive
+
+Mobile Real-time Video Segmentation
+It allows mobile devices to do video segmentation in a real-time, precise fashion. 
+Special input includes R,G,B and previous mask which accerlerates the segmentation speed. Large strides and skip connections imporoves the performance in terms of speed.
+
+
 ## Human Vision
 
 There's a large difference between the image we display and image we actually perceive.
@@ -175,6 +196,7 @@ How it works:
 
 ## JPEG Image Compression
 
+(Pic to show)
 Reasons:
 
 - As a lossy compression JPEG performs very well.
@@ -192,4 +214,6 @@ A feature is a significant piexe of information extracted from an image which pr
 ## Adversarial Examples in Image Classifiers
 
 - white box attack: adversary has compolete access to model and its parameters.
-- black box attack
+- black box attack: 
+1. Transferability, adversarial samples that fool model A have a huge chance of fooling a prevoiusly unseen model B.
+2. Substitute model, train a new model by treating the target model's output as a training labels, then, generate adversarial samples with substitute model.
